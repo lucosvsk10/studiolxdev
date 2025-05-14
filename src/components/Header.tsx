@@ -32,8 +32,12 @@ const Header = () => {
     <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-light/90 dark:bg-dark/90 backdrop-blur-md py-3' : 'py-5 bg-transparent'}`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <a href="#home" className="text-gold font-museo text-3xl font-bold">
-            Studio LX
+          <a href="#home" className="flex items-center">
+            <img 
+              src="/lovable-uploads/3bcecddd-55cf-4630-8314-e45f9987a071.png" 
+              alt="Studio LX" 
+              className="h-10 md:h-12"
+            />
           </a>
 
           {/* Desktop nav */}
@@ -43,7 +47,7 @@ const Header = () => {
                 <li key={item.name}>
                   <a 
                     href={item.href} 
-                    className="text-dark dark:text-light hover:text-gold dark:hover:text-gold font-bold tracking-wide transition-colors"
+                    className="text-dark dark:text-light hover:text-gold dark:hover:text-gold font-extralight tracking-wide transition-colors uppercase"
                   >
                     {item.name}
                   </a>
@@ -52,7 +56,7 @@ const Header = () => {
               <li>
                 <a 
                   href="#contact" 
-                  className="bg-gold text-dark font-bold py-2 px-4 rounded-lg transition-all hover:bg-gold/80 hover:-translate-y-1"
+                  className="bg-gold text-dark font-bold py-2 px-4 rounded-lg transition-all hover:bg-gold/80 hover:-translate-y-1 uppercase"
                 >
                   Peça seu orçamento
                 </a>
@@ -85,7 +89,7 @@ const Header = () => {
               <li key={item.name}>
                 <a 
                   href={item.href} 
-                  className="text-dark dark:text-light block py-2 text-lg"
+                  className="text-dark dark:text-light block py-2 text-lg font-extralight uppercase"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -95,7 +99,7 @@ const Header = () => {
             <li>
               <a 
                 href="#contact" 
-                className="bg-gold text-dark font-bold py-2 px-4 rounded-lg block text-center"
+                className="bg-gold text-dark font-bold py-2 px-4 rounded-lg block text-center uppercase"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Peça seu orçamento

@@ -52,37 +52,37 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: 'Lumina',
+      title: 'LUMINA',
       type: 'Landing Page',
       description: 'Página de destino para estúdio de fotografia',
       bg: 'from-blue-400/20 to-purple-400/20'
     },
     {
-      title: 'EcoVida',
+      title: 'ECOVIDA',
       type: 'Site Institucional',
       description: 'Site completo para empresa de produtos sustentáveis',
       bg: 'from-green-400/20 to-teal-400/20'
     },
     {
-      title: 'MentorPro',
+      title: 'MENTORPRO',
       type: 'Página de Vendas',
       description: 'Página de vendas para curso online de mentoria',
       bg: 'from-orange-400/20 to-amber-400/20'
     },
     {
-      title: 'ArquiTex',
+      title: 'ARCHITEX',
       type: 'Site Institucional',
       description: 'Site para escritório de arquitetura premium',
       bg: 'from-gray-400/20 to-gray-600/20'
     },
     {
-      title: 'FitLife',
+      title: 'FITLIFE',
       type: 'Link na Bio',
       description: 'Página para personal trainer com links para serviços',
       bg: 'from-red-400/20 to-orange-400/20'
     },
     {
-      title: 'DigiArt',
+      title: 'DIGIART',
       type: 'Portfolio',
       description: 'Portfólio para artista digital com galeria',
       bg: 'from-purple-400/20 to-pink-400/20'
@@ -93,7 +93,7 @@ const Portfolio = () => {
     <section id="portfolio" className="py-16 md:py-24 bg-white dark:bg-dark/90">
       <div className="container mx-auto px-4">
         <h2 ref={titleRef} className="section-title">
-          <span className="text-gold">Portfólio</span> de Projetos
+          <span className="text-gold">PORTFÓLIO</span> DE PROJETOS
         </h2>
         
         <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -104,7 +104,7 @@ const Portfolio = () => {
             >
               {/* Project image placeholder */}
               <div className={`h-48 bg-gradient-to-br ${project.bg} flex items-center justify-center`}>
-                <span className="font-museo text-3xl font-bold text-dark/70 dark:text-light/70">
+                <span className="font-museo text-3xl font-bold text-dark/70 dark:text-light/70 uppercase">
                   {project.title}
                 </span>
               </div>
@@ -112,12 +112,12 @@ const Portfolio = () => {
               {/* Project details */}
               <div className="p-6">
                 <div className="flex justify-between items-center mb-2">
-                  <h3 className="text-xl font-bold">{project.title}</h3>
-                  <span className="text-sm bg-gold/20 text-gold px-2 py-1 rounded-full">
+                  <h3 className="text-xl font-bold uppercase">{project.title}</h3>
+                  <span className="text-sm bg-gold/20 text-gold px-2 py-1 rounded-full uppercase">
                     {project.type}
                   </span>
                 </div>
-                <p className="text-dark/80 dark:text-light/80">
+                <p className="text-dark/80 dark:text-light/80 font-extralight">
                   {project.description}
                 </p>
               </div>

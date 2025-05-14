@@ -66,6 +66,7 @@ export default {
 				gold: '#efc349',
 				dark: '#222222',
 				light: '#d9d9d9',
+				'navy-dark': '#1a365d', // Added navy-dark color
 			},
 			fontFamily: {
 				'museo': ['Museo Moderno', 'sans-serif'],

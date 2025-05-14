@@ -7,10 +7,14 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div>
-            <h3 className="text-gold font-museo text-2xl font-bold mb-4">
-              Studio LX
-            </h3>
-            <p className="mb-4">
+            <div className="mb-4">
+              <img 
+                src="/lovable-uploads/3bcecddd-55cf-4630-8314-e45f9987a071.png" 
+                alt="Studio LX" 
+                className="h-12 mb-3"
+              />
+            </div>
+            <p className="mb-4 font-extralight">
               Designs digitais que geram resultados reais para o seu negócio.
             </p>
             <div className="flex space-x-4">
@@ -42,29 +46,29 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-bold text-xl mb-4">Links</h3>
-            <ul className="space-y-2">
+            <h3 className="font-bold text-xl mb-4 uppercase">Links</h3>
+            <ul className="space-y-2 font-extralight">
               <li>
-                <a href="#home" className="hover:text-gold transition-colors">Home</a>
+                <a href="#home" className="hover:text-gold transition-colors uppercase">Home</a>
               </li>
               <li>
-                <a href="#about" className="hover:text-gold transition-colors">Sobre</a>
+                <a href="#about" className="hover:text-gold transition-colors uppercase">Sobre</a>
               </li>
               <li>
-                <a href="#services" className="hover:text-gold transition-colors">Serviços</a>
+                <a href="#services" className="hover:text-gold transition-colors uppercase">Serviços</a>
               </li>
               <li>
-                <a href="#portfolio" className="hover:text-gold transition-colors">Portfólio</a>
+                <a href="#portfolio" className="hover:text-gold transition-colors uppercase">Portfólio</a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-gold transition-colors">Contato</a>
+                <a href="#contact" className="hover:text-gold transition-colors uppercase">Contato</a>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="font-bold text-xl mb-4">Contato</h3>
-            <div className="space-y-3">
+            <h3 className="font-bold text-xl mb-4 uppercase">Contato</h3>
+            <div className="space-y-3 font-extralight">
               <div className="flex items-center">
                 <Mail size={20} className="text-gold mr-2" />
                 <a href="mailto:contato@studiolx.com.br" className="hover:text-gold transition-colors">
@@ -81,7 +85,7 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-800 pt-6 text-center">
+        <div className="border-t border-gray-800 pt-6 text-center font-extralight">
           <p>Feito com 💻 e propósito por Studio LX</p>
           <p className="text-sm text-gray-500 mt-1">
             © {new Date().getFullYear()} Studio LX. Todos os direitos reservados.

@@ -76,7 +76,7 @@ const ContactForm = () => {
     <section id="contact" className="py-16 md:py-24 bg-white dark:bg-dark/90">
       <div className="container mx-auto px-4">
         <h2 ref={titleRef} className="section-title">
-          <span className="text-gold">Pronto</span> pra tirar seu projeto do papel?
+          <span className="text-gold">PRONTO</span> PRA TIRAR SEU PROJETO DO PAPEL?
         </h2>
         
         <div className="max-w-2xl mx-auto">
@@ -86,7 +86,7 @@ const ContactForm = () => {
             className="bg-light dark:bg-dark/50 p-8 rounded-2xl shadow-md"
           >
             <div className="mb-6">
-              <label htmlFor="name" className="block mb-2 font-bold">
+              <label htmlFor="name" className="block mb-2 font-bold uppercase">
                 Nome
               </label>
               <input
@@ -96,12 +96,12 @@ const ContactForm = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark/80 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gold"
+                className="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark/80 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gold font-extralight"
               />
             </div>
             
             <div className="mb-6">
-              <label htmlFor="email" className="block mb-2 font-bold">
+              <label htmlFor="email" className="block mb-2 font-bold uppercase">
                 E-mail
               </label>
               <input
@@ -111,12 +111,12 @@ const ContactForm = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark/80 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gold"
+                className="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark/80 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gold font-extralight"
               />
             </div>
             
             <div className="mb-6">
-              <label htmlFor="siteType" className="block mb-2 font-bold">
+              <label htmlFor="siteType" className="block mb-2 font-bold uppercase">
                 Tipo de site
               </label>
               <select
@@ -125,7 +125,7 @@ const ContactForm = () => {
                 value={formData.siteType}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark/80 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gold"
+                className="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark/80 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gold font-extralight"
               >
                 <option value="">Selecione o tipo de projeto</option>
                 <option value="landing-page">Landing Page</option>
@@ -137,7 +137,7 @@ const ContactForm = () => {
             </div>
             
             <div className="mb-6">
-              <label htmlFor="message" className="block mb-2 font-bold">
+              <label htmlFor="message" className="block mb-2 font-bold uppercase">
                 Mensagem
               </label>
               <textarea
@@ -147,14 +147,14 @@ const ContactForm = () => {
                 onChange={handleChange}
                 rows={5}
                 required
-                className="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark/80 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gold"
+                className="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark/80 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gold font-extralight"
               />
             </div>
             
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full btn-primary flex items-center justify-center group"
+              className="w-full btn-primary flex items-center justify-center group uppercase"
             >
               {isSubmitting ? (
                 <span className="animate-pulse">Enviando...</span>
