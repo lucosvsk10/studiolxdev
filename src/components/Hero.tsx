@@ -33,19 +33,19 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="pt-32 pb-16 md:pt-40 md:pb-24 bg-light dark:bg-dark">
+    <section id="home" className="pt-32 pb-16 md:pt-40 md:pb-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
           <h1 
             ref={headlineRef} 
             style={{transitionDelay: '100ms'}} 
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 uppercase"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 uppercase text-foreground"
           >
-            <span className="text-white dark:text-white">Designs digitais</span> que geram resultados reais
+            <span className="text-foreground">Designs digitais</span> que geram resultados reais
           </h1>
           <p 
             ref={subheadlineRef} 
-            className="text-xl md:text-2xl mb-8 max-w-2xl font-extralight" 
+            className="text-xl md:text-2xl mb-8 max-w-2xl" 
             style={{transitionDelay: '300ms'}}
           >
             Criação de sites, landing pages e páginas de vendas com estratégia e personalidade

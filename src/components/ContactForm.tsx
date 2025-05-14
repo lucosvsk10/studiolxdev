@@ -1,6 +1,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { useToast } from "@/hooks/use-toast";
+import { Mail, Phone } from 'lucide-react';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -15,6 +16,7 @@ const ContactForm = () => {
   
   const titleRef = useRef<HTMLHeadingElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
+  const contactInfoRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,7 +30,7 @@ const ContactForm = () => {
       { threshold: 0.1 }
     );
 
-    const elements = [titleRef.current, formRef.current];
+    const elements = [titleRef.current, formRef.current, contactInfoRef.current];
     elements.forEach((el) => {
       if (el) {
         el.classList.add('reveal');
@@ -73,17 +75,41 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-white dark:bg-dark/90">
+    <section id="contact" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <h2 ref={titleRef} className="section-title">
           <span className="text-gold">PRONTO</span> PRA TIRAR SEU PROJETO DO PAPEL?
         </h2>
         
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div ref={contactInfoRef} className="md:col-span-3 bg-background p-6 rounded-2xl shadow-md text-center">
+              <h3 className="text-2xl font-bold mb-4 uppercase">Entre em contato</h3>
+              <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-4">
+                <a 
+                  href="https://wa.me/5582998328966" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:text-gold transition-colors"
+                >
+                  <Phone className="text-gold" />
+                  <span>WhatsApp: (82) 99832-8966</span>
+                </a>
+                <a 
+                  href="mailto:studiolxdev@gmail.com" 
+                  className="flex items-center gap-2 hover:text-gold transition-colors"
+                >
+                  <Mail className="text-gold" />
+                  <span>Email: studiolxdev@gmail.com</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
           <form 
             ref={formRef} 
             onSubmit={handleSubmit} 
-            className="bg-light dark:bg-dark/50 p-8 rounded-2xl shadow-md"
+            className="bg-background border border-border p-8 rounded-2xl shadow-md"
           >
             <div className="mb-6">
               <label htmlFor="name" className="block mb-2 font-bold uppercase">
@@ -96,7 +122,7 @@ const ContactForm = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark/80 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gold font-extralight"
+                className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:outline-none focus:ring-2 focus:ring-gold"
               />
             </div>
             
@@ -111,7 +137,7 @@ const ContactForm = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark/80 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gold font-extralight"
+                className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:outline-none focus:ring-2 focus:ring-gold"
               />
             </div>
             
@@ -125,7 +151,7 @@ const ContactForm = () => {
                 value={formData.siteType}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark/80 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gold font-extralight"
+                className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:outline-none focus:ring-2 focus:ring-gold"
               >
                 <option value="">Selecione o tipo de projeto</option>
                 <option value="landing-page">Landing Page</option>
@@ -147,7 +173,7 @@ const ContactForm = () => {
                 onChange={handleChange}
                 rows={5}
                 required
-                className="w-full px-4 py-3 rounded-lg bg-white dark:bg-dark/80 border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-gold font-extralight"
+                className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:outline-none focus:ring-2 focus:ring-gold"
               />
             </div>
             

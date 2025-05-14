@@ -5,65 +5,65 @@
 
 @layer base {
   :root {
-    --background: 0 0% 85%;
-    --foreground: 220 70% 20%; /* navy-dark for light mode */
+    --background: 0 0% 85%; /* #d9d9d9 */
+    --foreground: 0 0% 13%; /* #222222 */
 
     --card: 0 0% 100%;
-    --card-foreground: 220 70% 20%;
+    --card-foreground: 0 0% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 70% 20%;
+    --popover-foreground: 0 0% 13%;
 
-    --primary: 45 85% 61%;
-    --primary-foreground: 220 70% 20%;
+    --primary: 45 85% 61%; /* #efc349 gold */
+    --primary-foreground: 0 0% 13%;
 
     --secondary: 0 0% 96%;
-    --secondary-foreground: 220 70% 20%;
+    --secondary-foreground: 0 0% 13%;
 
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 45 85% 61%;
-    --accent-foreground: 220 70% 20%;
+    --accent: 45 85% 61%; /* #efc349 gold */
+    --accent-foreground: 0 0% 13%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 89%;
     --input: 0 0% 89%;
-    --ring: 45 85% 61%;
+    --ring: 45 85% 61%; /* #efc349 gold */
 
     --radius: 1rem;
   }
 
   .dark {
-    --background: 0 0% 13%;
-    --foreground: 0 0% 98%; /* white for dark mode */
+    --background: 0 0% 13%; /* #222222 */
+    --foreground: 0 0% 85%; /* #d9d9d9 */
 
     --card: 0 0% 18%;
-    --card-foreground: 0 0% 98%;
+    --card-foreground: 0 0% 85%;
 
     --popover: 0 0% 13%;
-    --popover-foreground: 0 0% 98%;
+    --popover-foreground: 0 0% 85%;
 
-    --primary: 45 85% 61%;
+    --primary: 45 85% 61%; /* #efc349 gold */
     --primary-foreground: 0 0% 13%;
 
     --secondary: 0 0% 18%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary-foreground: 0 0% 85%;
 
     --muted: 0 0% 18%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 45 85% 61%;
+    --accent: 45 85% 61%; /* #efc349 gold */
     --accent-foreground: 0 0% 13%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 0 0% 85%;
 
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 45 85% 61%;
+    --ring: 45 85% 61%; /* #efc349 gold */
   }
 }
 
@@ -73,11 +73,11 @@
   }
 
   body {
-    @apply bg-background text-foreground font-bebas font-extralight;
+    @apply bg-background text-foreground font-hkgrotesk font-extralight;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-museo font-bold uppercase;
+    @apply font-hkgrotesk font-bold uppercase;
   }
   
   section {
@@ -118,4 +118,29 @@
 
 ::-webkit-scrollbar-thumb {
   @apply bg-gold rounded-full;
+}
+
+/* HK Grotesk Font */
+@font-face {
+  font-family: 'HK Grotesk';
+  src: url('/fonts/HKGrotesk-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HK Grotesk';
+  src: url('/fonts/HKGrotesk-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HK Grotesk';
+  src: url('/fonts/HKGrotesk-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }

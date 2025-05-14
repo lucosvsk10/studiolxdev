@@ -80,7 +80,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-16 md:py-24 bg-light dark:bg-dark">
+    <section id="services" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <h2 ref={titleRef} className="section-title">NOSSOS <span className="text-gold">SERVIÇOS</span></h2>
         
@@ -88,11 +88,11 @@ const Services = () => {
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="service-card bg-white dark:bg-dark/80 p-6 rounded-2xl shadow-md card-hover"
+              className="service-card bg-background border border-border p-6 rounded-2xl shadow-md card-hover"
             >
               <div className="mb-4">{service.icon}</div>
               <h3 className="text-2xl font-bold mb-2 uppercase">{service.title}</h3>
-              <p className="text-dark/80 dark:text-light/80 font-extralight">{service.description}</p>
+              <p className="text-foreground/80">{service.description}</p>
             </div>
           ))}
         </div>

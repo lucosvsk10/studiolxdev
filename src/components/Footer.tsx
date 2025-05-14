@@ -2,6 +2,8 @@
 import { Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  
   return (
     <footer className="bg-dark text-light pt-16 pb-8">
       <div className="container mx-auto px-4">
@@ -14,7 +16,7 @@ const Footer = () => {
                 className="h-12 mb-3"
               />
             </div>
-            <p className="mb-4 font-extralight">
+            <p className="mb-4">
               Designs digitais que geram resultados reais para o seu negócio.
             </p>
             <div className="flex space-x-4">
@@ -47,7 +49,7 @@ const Footer = () => {
           
           <div>
             <h3 className="font-bold text-xl mb-4 uppercase">Links</h3>
-            <ul className="space-y-2 font-extralight">
+            <ul className="space-y-2">
               <li>
                 <a href="#home" className="hover:text-gold transition-colors uppercase">Home</a>
               </li>
@@ -68,27 +70,32 @@ const Footer = () => {
           
           <div>
             <h3 className="font-bold text-xl mb-4 uppercase">Contato</h3>
-            <div className="space-y-3 font-extralight">
+            <div className="space-y-3">
               <div className="flex items-center">
-                <Mail size={20} className="text-gold mr-2" />
-                <a href="mailto:contato@studiolx.com.br" className="hover:text-gold transition-colors">
-                  contato@studiolx.com.br
+                <Phone size={20} className="text-gold mr-2" />
+                <a 
+                  href="https://wa.me/5582998328966" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-gold transition-colors"
+                >
+                  (82) 99832-8966
                 </a>
               </div>
               <div className="flex items-center">
-                <Phone size={20} className="text-gold mr-2" />
-                <a href="tel:+5511999999999" className="hover:text-gold transition-colors">
-                  +55 11 99999-9999
+                <Mail size={20} className="text-gold mr-2" />
+                <a href="mailto:studiolxdev@gmail.com" className="hover:text-gold transition-colors">
+                  studiolxdev@gmail.com
                 </a>
               </div>
             </div>
           </div>
         </div>
         
-        <div className="border-t border-gray-800 pt-6 text-center font-extralight">
+        <div className="border-t border-gray-800 pt-6 text-center">
           <p>Feito com 💻 e propósito por Studio LX</p>
           <p className="text-sm text-gray-500 mt-1">
-            © {new Date().getFullYear()} Studio LX. Todos os direitos reservados.
+            © {currentYear} Studio LX. Todos os direitos reservados.
           </p>
         </div>
       </div>

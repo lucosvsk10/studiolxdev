@@ -29,7 +29,7 @@ const Header = () => {
   ];
 
   return (
-    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-light/90 dark:bg-dark/90 backdrop-blur-md py-3' : 'py-5 bg-transparent'}`}>
+    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? 'backdrop-blur-md py-3' : 'py-5'} bg-background`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <a href="#home" className="flex items-center">
@@ -47,7 +47,7 @@ const Header = () => {
                 <li key={item.name}>
                   <a 
                     href={item.href} 
-                    className="text-dark dark:text-light hover:text-gold dark:hover:text-gold font-extralight tracking-wide transition-colors uppercase"
+                    className="text-foreground hover:text-gold transition-colors uppercase"
                   >
                     {item.name}
                   </a>
@@ -72,7 +72,7 @@ const Header = () => {
             <ThemeToggle />
             <button 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
-              className="text-dark dark:text-light"
+              className="text-foreground"
               aria-label="Menu"
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -83,13 +83,13 @@ const Header = () => {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <nav className="md:hidden absolute top-full left-0 w-full bg-light dark:bg-dark py-4 border-t border-gold/30">
+        <nav className="md:hidden absolute top-full left-0 w-full bg-background py-4 border-t border-gold/30">
           <ul className="container mx-auto px-4 flex flex-col space-y-4">
             {navItems.map((item) => (
               <li key={item.name}>
                 <a 
                   href={item.href} 
-                  className="text-dark dark:text-light block py-2 text-lg font-extralight uppercase"
+                  className="text-foreground block py-2 text-lg uppercase"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}

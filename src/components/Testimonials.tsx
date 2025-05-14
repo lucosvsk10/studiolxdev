@@ -69,7 +69,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-16 md:py-24 bg-light dark:bg-dark">
+    <section id="testimonials" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <h2 ref={titleRef} className="section-title">O QUE NOSSOS <span className="text-gold">CLIENTES DIZEM</span></h2>
         
@@ -77,16 +77,16 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index} 
-              className="testimonial-card bg-white dark:bg-dark/80 p-6 rounded-2xl shadow-md relative"
+              className="testimonial-card bg-background border border-border p-6 rounded-2xl shadow-md relative"
             >
               {/* Quotation mark */}
               <div className="absolute top-4 right-4 text-6xl text-gold/20 font-serif">"</div>
               
-              <p className="mb-6 text-lg relative z-10 font-extralight">
+              <p className="mb-6 text-lg relative z-10">
                 {testimonial.text}
               </p>
               
-              <div className="border-t border-gray-200 dark:border-gray-700 pt-4 flex items-center">
+              <div className="border-t border-border pt-4 flex items-center">
                 {/* Avatar placeholder */}
                 <div className="w-10 h-10 rounded-full bg-gold mr-3 flex items-center justify-center">
                   <span className="text-dark font-bold uppercase">
@@ -96,7 +96,7 @@ const Testimonials = () => {
                 
                 <div>
                   <p className="font-bold uppercase">{testimonial.author}</p>
-                  <p className="text-dark/60 dark:text-light/60 text-sm font-extralight">{testimonial.role}</p>
+                  <p className="text-foreground/60 text-sm">{testimonial.role}</p>
                 </div>
               </div>
             </div>

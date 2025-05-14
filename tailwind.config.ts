@@ -66,11 +66,12 @@ export default {
 				gold: '#efc349',
 				dark: '#222222',
 				light: '#d9d9d9',
-				'navy-dark': '#1a365d', // Added navy-dark color
+				'navy-dark': '#1a365d',
 			},
 			fontFamily: {
 				'museo': ['Museo Moderno', 'sans-serif'],
 				'bebas': ['Bebas Neue', 'sans-serif'],
+				'hkgrotesk': ['HK Grotesk', 'system-ui', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
