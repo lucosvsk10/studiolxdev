@@ -7,6 +7,7 @@ import Services from '@/components/Services';
 import Portfolio from '@/components/Portfolio';
 import Testimonials from '@/components/Testimonials';
 import ContactForm from '@/components/ContactForm';
+import Orcamento from '@/components/Orcamento';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -44,6 +45,7 @@ const Index = () => {
         <Portfolio />
         <Testimonials />
         <ContactForm />
+        <Orcamento />
       </main>
       <Footer />
     </div>

@@ -13,7 +13,12 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/3bcecddd-55cf-4630-8314-e45f9987a071.png" 
                 alt="Studio LX" 
-                className="h-12 mb-3"
+                className="h-12 mb-3 block dark:hidden"
+              />
+              <img 
+                src="/lovable-uploads/963296eb-76a2-478f-82e4-230aa62d9a01.png" 
+                alt="Studio LX" 
+                className="h-12 mb-3 hidden dark:block"
               />
             </div>
             <p className="mb-4">
@@ -21,7 +26,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://instagram.com" 
+                href="https://www.instagram.com/lucasilva.zz/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="h-10 w-10 rounded-full bg-gold/20 flex items-center justify-center hover:bg-gold/40 transition-colors"
@@ -64,6 +69,9 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#contact" className="hover:text-gold transition-colors uppercase">Contato</a>
+              </li>
+              <li>
+                <a href="#orcamento" className="hover:text-gold transition-colors uppercase">Orçamento</a>
               </li>
             </ul>
           </div>

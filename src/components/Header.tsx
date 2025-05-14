@@ -26,6 +26,7 @@ const Header = () => {
     { name: 'Serviços', href: '#services' },
     { name: 'Portfólio', href: '#portfolio' },
     { name: 'Contato', href: '#contact' },
+    { name: 'Orçamento', href: '#orcamento' },
   ];
 
   return (
@@ -36,7 +37,12 @@ const Header = () => {
             <img 
               src="/lovable-uploads/3bcecddd-55cf-4630-8314-e45f9987a071.png" 
               alt="Studio LX" 
-              className="h-10 md:h-12"
+              className="h-10 md:h-12 block dark:hidden"
+            />
+            <img 
+              src="/lovable-uploads/963296eb-76a2-478f-82e4-230aa62d9a01.png" 
+              alt="Studio LX" 
+              className="h-10 md:h-12 hidden dark:block"
             />
           </a>
 
@@ -55,7 +61,7 @@ const Header = () => {
               ))}
               <li>
                 <a 
-                  href="#contact" 
+                  href="#orcamento" 
                   className="bg-gold text-dark font-bold py-2 px-4 rounded-lg transition-all hover:bg-gold/80 hover:-translate-y-1 uppercase"
                 >
                   Peça seu orçamento
@@ -98,7 +104,7 @@ const Header = () => {
             ))}
             <li>
               <a 
-                href="#contact" 
+                href="#orcamento" 
                 className="bg-gold text-dark font-bold py-2 px-4 rounded-lg block text-center uppercase"
                 onClick={() => setMobileMenuOpen(false)}
               >
