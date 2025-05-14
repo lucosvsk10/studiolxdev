@@ -40,7 +40,7 @@ const Header = () => {
               className="h-10 md:h-12 block dark:hidden"
             />
             <img 
-              src="/lovable-uploads/963296eb-76a2-478f-82e4-230aa62d9a01.png" 
+              src="/lovable-uploads/f5917519-8b48-4fd4-b513-97907b219090.png" 
               alt="Studio LX" 
               className="h-10 md:h-12 hidden dark:block"
             />
