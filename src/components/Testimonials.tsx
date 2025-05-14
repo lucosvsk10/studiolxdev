@@ -30,7 +30,8 @@ const Testimonials = () => {
       const testimonials = testimonialsRef.current.querySelectorAll('.testimonial-card');
       testimonials.forEach((testimonial, index) => {
         testimonial.classList.add('reveal');
-        testimonial.style.transitionDelay = `${200 + index * 150}ms`;
+        // Use HTMLElement type assertion to fix the TypeScript error
+        (testimonial as HTMLElement).style.transitionDelay = `${200 + index * 150}ms`;
         observer.observe(testimonial);
       });
     }

@@ -1,6 +1,6 @@
 
 import { useEffect, useRef } from 'react';
-import { LandingPage, Home, Briefcase, List, Phone } from 'lucide-react';
+import { LayoutTemplate, Home, Briefcase, List, Phone } from 'lucide-react';
 
 const Services = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -31,7 +31,8 @@ const Services = () => {
       const cards = cardsRef.current.querySelectorAll('.service-card');
       cards.forEach((card, index) => {
         card.classList.add('reveal');
-        card.style.transitionDelay = `${200 + index * 100}ms`;
+        // Use HTMLElement type assertion to fix the TypeScript error
+        (card as HTMLElement).style.transitionDelay = `${200 + index * 100}ms`;
         observer.observe(card);
       });
     }
@@ -52,7 +53,7 @@ const Services = () => {
 
   const services = [
     {
-      icon: <LandingPage size={40} className="text-gold" />,
+      icon: <LayoutTemplate size={40} className="text-gold" />,
       title: 'Landing Pages',
       description: 'Conversão rápida e eficaz para suas campanhas e lançamentos'
     },

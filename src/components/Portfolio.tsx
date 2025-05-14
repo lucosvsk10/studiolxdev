@@ -30,7 +30,8 @@ const Portfolio = () => {
       const projects = gridRef.current.querySelectorAll('.project-card');
       projects.forEach((project, index) => {
         project.classList.add('reveal');
-        project.style.transitionDelay = `${200 + index * 100}ms`;
+        // Use HTMLElement type assertion to fix the TypeScript error
+        (project as HTMLElement).style.transitionDelay = `${200 + index * 100}ms`;
         observer.observe(project);
       });
     }
