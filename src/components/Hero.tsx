@@ -33,7 +33,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="pt-48 pb-24 md:pt-56 md:pb-32 bg-background">
+    <section id="home" className="pt-80 pb-24 md:pt-96 md:pb-32 bg-background">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
           <h1 
