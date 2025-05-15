@@ -9,31 +9,19 @@ import Testimonials from '@/components/Testimonials';
 import ContactForm from '@/components/ContactForm';
 import Orcamento from '@/components/Orcamento';
 import Footer from '@/components/Footer';
+import { useRevealAnimation } from '@/hooks/useRevealAnimation';
 
 const Index = () => {
+  const { handleScroll } = useRevealAnimation();
+  
   useEffect(() => {
-    // Implement scroll reveal functionality
-    const handleScroll = () => {
-      const reveals = document.querySelectorAll('.reveal');
-      
-      reveals.forEach((element) => {
-        const windowHeight = window.innerHeight;
-        const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 150;
-        
-        if (elementTop < windowHeight - elementVisible) {
-          element.classList.add('active');
-        }
-      });
-    };
-    
     window.addEventListener('scroll', handleScroll);
     
     // Trigger once on load to reveal elements already in view
     handleScroll();
     
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [handleScroll]);
   
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground font-hkgrotesk">

@@ -1,5 +1,5 @@
 
-import { Mail, Phone } from 'lucide-react';
+import { Mail, Phone, Instagram, Linkedin, Dribbble } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -30,24 +30,27 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="h-10 w-10 rounded-full bg-gold/20 flex items-center justify-center hover:bg-gold/40 transition-colors"
+                aria-label="Instagram"
               >
-                <i className="fab fa-instagram text-gold"></i>
+                <Instagram className="text-gold" size={18} />
               </a>
               <a 
                 href="https://linkedin.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="h-10 w-10 rounded-full bg-gold/20 flex items-center justify-center hover:bg-gold/40 transition-colors"
+                aria-label="LinkedIn"
               >
-                <i className="fab fa-linkedin-in text-gold"></i>
+                <Linkedin className="text-gold" size={18} />
               </a>
               <a 
                 href="https://behance.net" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="h-10 w-10 rounded-full bg-gold/20 flex items-center justify-center hover:bg-gold/40 transition-colors"
+                aria-label="Behance"
               >
-                <i className="fab fa-behance text-gold"></i>
+                <Dribbble className="text-gold" size={18} />
               </a>
             </div>
           </div>
