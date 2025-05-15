@@ -147,9 +147,7 @@
 /* Remove o banner do Lovable */
 .lovable-badge,
 .lovable-footer,
-footer:has(a[href*="lovable.dev"]),
-div:has(a[href*="lovable.dev"]),
-a[href*="lovable.dev"]) {
+a[href*="lovable.dev"] {
   display: none !important;
   visibility: hidden !important;
   pointer-events: none !important;
