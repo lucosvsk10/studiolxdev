@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 import { Store, Scissors, Dumbbell, Stethoscope, MapPin, Phone } from 'lucide-react';
 
@@ -97,7 +98,7 @@ const WhyWebsite = () => {
             >
               <div className="mb-4">{niche.icon}</div>
               <h3 className="text-2xl font-bold mb-2 uppercase font-museo">{niche.title}</h3>
-              <p className="font-museo">{niche.description}</p>
+              <p className="font-hkgrotesk">{niche.description}</p>
             </div>
           ))}
         </div>

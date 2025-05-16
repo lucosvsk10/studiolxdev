@@ -93,7 +93,7 @@ const Services = () => {
               className="service-card bg-background border border-foreground/30 p-6 rounded-lg transition-all hover:border-gold"
             >
               <div className="mb-4">{service.icon}</div>
-              <h3 className="text-2xl font-bold mb-2 uppercase font-hkgrotesk">{service.title}</h3>
+              <h3 className="text-2xl font-bold mb-2 uppercase font-museo">{service.title}</h3>
               <p className="font-hkgrotesk">{service.description}</p>
             </div>
           ))}

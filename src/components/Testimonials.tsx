@@ -97,7 +97,7 @@ const Testimonials = () => {
                 </div>
                 
                 <div>
-                  <p className="font-bold uppercase font-hkgrotesk">{testimonial.author}</p>
+                  <p className="font-bold uppercase font-museo">{testimonial.author}</p>
                   <p className="text-foreground/60 text-sm font-hkgrotesk">{testimonial.role}</p>
                 </div>
               </div>

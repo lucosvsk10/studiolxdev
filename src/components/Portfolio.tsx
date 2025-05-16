@@ -104,7 +104,7 @@ const Portfolio = () => {
             >
               {/* Project image placeholder */}
               <div className={`h-48 bg-gradient-to-br ${project.bg} flex items-center justify-center`}>
-                <span className="font-hkgrotesk text-3xl font-bold text-foreground/70 uppercase">
+                <span className="font-museo text-3xl font-bold text-foreground/70 uppercase">
                   {project.title}
                 </span>
               </div>
@@ -112,7 +112,7 @@ const Portfolio = () => {
               {/* Project details */}
               <div className="p-6">
                 <div className="flex justify-between items-center mb-2">
-                  <h3 className="text-xl font-bold uppercase font-hkgrotesk">{project.title}</h3>
+                  <h3 className="text-xl font-bold uppercase font-museo">{project.title}</h3>
                   <span className="text-sm bg-gold/20 text-gold px-2 py-1 rounded-full uppercase">
                     {project.type}
                   </span>
