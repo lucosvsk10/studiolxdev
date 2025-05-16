@@ -1,6 +1,5 @@
-
 import { useEffect, useRef } from 'react';
-import { Store, Scissors, Dumbbell, Stethoscope, MapPin } from 'lucide-react';
+import { Store, Scissors, Dumbbell, Stethoscope, MapPin, Phone } from 'lucide-react';
 
 const WhyWebsite = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
