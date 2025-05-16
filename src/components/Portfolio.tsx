@@ -112,12 +112,12 @@ const Portfolio = () => {
               {/* Project details */}
               <div className="p-6">
                 <div className="flex justify-between items-center mb-2">
-                  <h3 className="text-xl font-bold uppercase font-museo">{project.title}</h3>
+                  <h3 className="text-xl font-bold uppercase font-hkgrotesk">{project.title}</h3>
                   <span className="text-sm bg-gold/20 text-gold px-2 py-1 rounded-full uppercase">
                     {project.type}
                   </span>
                 </div>
-                <p className="text-foreground/80 font-museo">
+                <p className="text-foreground/80 font-hkgrotesk">
                   {project.description}
                 </p>
               </div>

@@ -84,7 +84,7 @@ const Testimonials = () => {
               {/* Quotation mark */}
               <div className="absolute top-4 right-4 text-6xl text-gold/20 font-serif">"</div>
               
-              <p className="mb-6 text-lg relative z-10 font-museo">
+              <p className="mb-6 text-lg relative z-10 font-hkgrotesk">
                 {testimonial.text}
               </p>
               
@@ -97,8 +97,8 @@ const Testimonials = () => {
                 </div>
                 
                 <div>
-                  <p className="font-bold uppercase font-museo">{testimonial.author}</p>
-                  <p className="text-foreground/60 text-sm font-museo">{testimonial.role}</p>
+                  <p className="font-bold uppercase font-hkgrotesk">{testimonial.author}</p>
+                  <p className="text-foreground/60 text-sm font-hkgrotesk">{testimonial.role}</p>
                 </div>
               </div>
             </div>
