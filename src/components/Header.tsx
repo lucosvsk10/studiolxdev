@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import ThemeToggle from './ThemeToggle';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,8 +25,8 @@ const Header = () => {
     { name: 'Sobre', href: '#about' },
     { name: 'Serviços', href: '#services' },
     { name: 'Portfólio', href: '#portfolio' },
-    { name: 'Contato', href: '#contact' },
-    { name: 'Orçamento', href: '#orcamento' },
+    { name: 'Por que ter um site?', href: '#why-website' },
+    { name: 'Serviços & Investimentos', href: '#orcamento' },
   ];
 
   return (
@@ -48,7 +48,7 @@ const Header = () => {
 
           {/* Desktop nav */}
           <nav className="hidden md:block">
-            <ul className="flex items-center space-x-8">
+            <ul className="flex items-center space-x-6">
               {navItems.map((item) => (
                 <li key={item.name}>
                   <a 
@@ -61,10 +61,13 @@ const Header = () => {
               ))}
               <li>
                 <a 
-                  href="#orcamento" 
-                  className="bg-gold text-dark font-bold py-2 px-4 rounded-lg transition-all hover:bg-gold/80 hover:-translate-y-1 uppercase"
+                  href="https://wa.me/558298328966?text=Oi!%20Vim%20pelo%20site%20e%20quero%20um%20orçamento%20personalizado%20para%20meu%20projeto."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-2 border-foreground bg-transparent text-foreground px-4 py-2 rounded-lg transition-all hover:border-gold hover:text-gold uppercase flex items-center gap-2"
                 >
-                  Peça seu orçamento
+                  <Phone size={16} />
+                  Falar com Studio LX
                 </a>
               </li>
               <li>
@@ -104,11 +107,14 @@ const Header = () => {
             ))}
             <li>
               <a 
-                href="#orcamento" 
-                className="bg-gold text-dark font-bold py-2 px-4 rounded-lg block text-center uppercase"
+                href="https://wa.me/558298328966?text=Oi!%20Vim%20pelo%20site%20e%20quero%20um%20orçamento%20personalizado%20para%20meu%20projeto."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-foreground bg-transparent text-foreground px-4 py-2 rounded-lg block text-center uppercase flex items-center justify-center gap-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Peça seu orçamento
+                <Phone size={16} />
+                Falar com Studio LX
               </a>
             </li>
           </ul>

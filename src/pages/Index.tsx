@@ -6,7 +6,7 @@ import About from '@/components/About';
 import Services from '@/components/Services';
 import Portfolio from '@/components/Portfolio';
 import Testimonials from '@/components/Testimonials';
-import ContactForm from '@/components/ContactForm';
+import WhyWebsite from '@/components/WhyWebsite';
 import Orcamento from '@/components/Orcamento';
 import Footer from '@/components/Footer';
 import { useRevealAnimation } from '@/hooks/useRevealAnimation';
@@ -32,7 +32,7 @@ const Index = () => {
         <Services />
         <Portfolio />
         <Testimonials />
-        <ContactForm />
+        <WhyWebsite />
         <Orcamento />
       </main>
       <Footer />

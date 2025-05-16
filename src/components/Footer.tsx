@@ -1,5 +1,5 @@
 
-import { Mail, Phone, Instagram, Linkedin, Dribbble } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -7,105 +7,38 @@ const Footer = () => {
   return (
     <footer className="bg-dark text-light pt-16 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div>
-            <div className="mb-4">
-              <img 
-                src="/lovable-uploads/3bcecddd-55cf-4630-8314-e45f9987a071.png" 
-                alt="Studio LX" 
-                className="h-12 mb-3 block dark:hidden"
-              />
-              <img 
-                src="/lovable-uploads/f5917519-8b48-4fd4-b513-97907b219090.png" 
-                alt="Studio LX" 
-                className="h-12 mb-3 hidden dark:block"
-              />
-            </div>
-            <p className="mb-4">
-              Designs digitais que geram resultados reais para o seu negócio.
-            </p>
-            <div className="flex space-x-4">
-              <a 
-                href="https://www.instagram.com/lucasilva.zz/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="h-10 w-10 rounded-full bg-gold/20 flex items-center justify-center hover:bg-gold/40 transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="text-gold" size={18} />
-              </a>
-              <a 
-                href="https://linkedin.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="h-10 w-10 rounded-full bg-gold/20 flex items-center justify-center hover:bg-gold/40 transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="text-gold" size={18} />
-              </a>
-              <a 
-                href="https://behance.net" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="h-10 w-10 rounded-full bg-gold/20 flex items-center justify-center hover:bg-gold/40 transition-colors"
-                aria-label="Behance"
-              >
-                <Dribbble className="text-gold" size={18} />
-              </a>
-            </div>
+        <div className="flex flex-col items-center justify-center mb-8">
+          <div className="mb-6">
+            <img 
+              src="/lovable-uploads/3bcecddd-55cf-4630-8314-e45f9987a071.png" 
+              alt="Studio LX" 
+              className="h-16 mb-3 block dark:hidden"
+            />
+            <img 
+              src="/lovable-uploads/f5917519-8b48-4fd4-b513-97907b219090.png" 
+              alt="Studio LX" 
+              className="h-16 mb-3 hidden dark:block"
+            />
           </div>
           
-          <div>
-            <h3 className="font-bold text-xl mb-4 uppercase">Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#home" className="hover:text-gold transition-colors uppercase">Home</a>
-              </li>
-              <li>
-                <a href="#about" className="hover:text-gold transition-colors uppercase">Sobre</a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-gold transition-colors uppercase">Serviços</a>
-              </li>
-              <li>
-                <a href="#portfolio" className="hover:text-gold transition-colors uppercase">Portfólio</a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-gold transition-colors uppercase">Contato</a>
-              </li>
-              <li>
-                <a href="#orcamento" className="hover:text-gold transition-colors uppercase">Orçamento</a>
-              </li>
-            </ul>
-          </div>
+          <p className="mb-6 text-center max-w-md font-museo">
+            Designs digitais que geram resultados reais para o seu negócio.
+          </p>
           
-          <div>
-            <h3 className="font-bold text-xl mb-4 uppercase">Contato</h3>
-            <div className="space-y-3">
-              <div className="flex items-center">
-                <Phone size={20} className="text-gold mr-2" />
-                <a 
-                  href="https://wa.me/5582998328966" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:text-gold transition-colors"
-                >
-                  (82) 99832-8966
-                </a>
-              </div>
-              <div className="flex items-center">
-                <Mail size={20} className="text-gold mr-2" />
-                <a href="mailto:studiolxdev@gmail.com" className="hover:text-gold transition-colors">
-                  studiolxdev@gmail.com
-                </a>
-              </div>
-            </div>
-          </div>
+          <a 
+            href="https://www.instagram.com/lucasilva.zz/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="h-12 w-12 rounded-full border-2 border-gold flex items-center justify-center hover:bg-gold/20 transition-colors"
+            aria-label="Instagram"
+          >
+            <Instagram className="text-gold" size={24} />
+          </a>
         </div>
         
         <div className="border-t border-gray-800 pt-6 text-center">
-          <p>Feito com 💻 e propósito por Studio LX</p>
-          <p className="text-sm text-gray-500 mt-1">
+          <p className="font-museo">Feito com 💻 e propósito por Studio LX</p>
+          <p className="text-sm text-gray-500 mt-1 font-museo">
             © {currentYear} Studio LX. Todos os direitos reservados.
           </p>
         </div>
