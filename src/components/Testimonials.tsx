@@ -69,24 +69,26 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-16 md:py-24 bg-background">
+    <section id="testimonials" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <h2 ref={titleRef} className="section-title">O QUE NOSSOS <span className="text-gold">CLIENTES DIZEM</span></h2>
+        <h2 ref={titleRef} className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase mb-8 text-center font-museo">
+          O QUE NOSSOS <span className="text-gold">CLIENTES DIZEM</span>
+        </h2>
         
         <div ref={testimonialsRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div 
               key={index} 
-              className="testimonial-card bg-background border border-border p-6 rounded-2xl shadow-md relative"
+              className="testimonial-card bg-background border border-foreground/30 p-6 rounded-lg transition-all hover:border-gold relative"
             >
               {/* Quotation mark */}
               <div className="absolute top-4 right-4 text-6xl text-gold/20 font-serif">"</div>
               
-              <p className="mb-6 text-lg relative z-10">
+              <p className="mb-6 text-lg relative z-10 font-museo">
                 {testimonial.text}
               </p>
               
-              <div className="border-t border-border pt-4 flex items-center">
+              <div className="border-t border-foreground/30 pt-4 flex items-center">
                 {/* Avatar placeholder */}
                 <div className="w-10 h-10 rounded-full bg-gold mr-3 flex items-center justify-center">
                   <span className="text-dark font-bold uppercase">
@@ -95,8 +97,8 @@ const Testimonials = () => {
                 </div>
                 
                 <div>
-                  <p className="font-bold uppercase">{testimonial.author}</p>
-                  <p className="text-foreground/60 text-sm">{testimonial.role}</p>
+                  <p className="font-bold uppercase font-museo">{testimonial.author}</p>
+                  <p className="text-foreground/60 text-sm font-museo">{testimonial.role}</p>
                 </div>
               </div>
             </div>

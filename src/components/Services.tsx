@@ -80,19 +80,21 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-16 md:py-24 bg-background">
+    <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <h2 ref={titleRef} className="section-title">NOSSOS <span className="text-gold">SERVIÇOS</span></h2>
+        <h2 ref={titleRef} className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase mb-8 text-center font-museo">
+          NOSSOS <span className="text-gold">SERVIÇOS</span>
+        </h2>
         
         <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="service-card bg-background border border-border p-6 rounded-2xl shadow-md card-hover"
+              className="service-card bg-background border border-foreground/30 p-6 rounded-lg transition-all hover:border-gold"
             >
               <div className="mb-4">{service.icon}</div>
-              <h3 className="text-2xl font-bold mb-2 uppercase">{service.title}</h3>
-              <p className="text-foreground/80">{service.description}</p>
+              <h3 className="text-2xl font-bold mb-2 uppercase font-museo">{service.title}</h3>
+              <p className="font-museo">{service.description}</p>
             </div>
           ))}
         </div>

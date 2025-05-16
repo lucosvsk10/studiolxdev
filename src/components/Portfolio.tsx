@@ -90,9 +90,9 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-16 md:py-24 bg-background">
+    <section id="portfolio" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <h2 ref={titleRef} className="section-title">
+        <h2 ref={titleRef} className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase mb-8 text-center font-museo">
           <span className="text-gold">PORTFÓLIO</span> DE PROJETOS
         </h2>
         
@@ -100,7 +100,7 @@ const Portfolio = () => {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="project-card bg-background border border-border rounded-2xl overflow-hidden shadow-md card-hover"
+              className="project-card bg-background border border-foreground/30 rounded-lg overflow-hidden transition-all hover:border-gold"
             >
               {/* Project image placeholder */}
               <div className={`h-48 bg-gradient-to-br ${project.bg} flex items-center justify-center`}>
@@ -112,12 +112,12 @@ const Portfolio = () => {
               {/* Project details */}
               <div className="p-6">
                 <div className="flex justify-between items-center mb-2">
-                  <h3 className="text-xl font-bold uppercase">{project.title}</h3>
+                  <h3 className="text-xl font-bold uppercase font-museo">{project.title}</h3>
                   <span className="text-sm bg-gold/20 text-gold px-2 py-1 rounded-full uppercase">
                     {project.type}
                   </span>
                 </div>
-                <p className="text-foreground/80">
+                <p className="text-foreground/80 font-museo">
                   {project.description}
                 </p>
               </div>
