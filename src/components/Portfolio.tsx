@@ -1,7 +1,10 @@
+
 import { useEffect, useRef } from 'react';
+
 const Portfolio = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -12,6 +15,7 @@ const Portfolio = () => {
     }, {
       threshold: 0.1
     });
+
     const elements = [titleRef.current, gridRef.current];
     elements.forEach(el => {
       if (el) {
@@ -30,6 +34,7 @@ const Portfolio = () => {
         observer.observe(project);
       });
     }
+
     return () => {
       elements.forEach(el => {
         if (el) observer.unobserve(el);
@@ -42,6 +47,7 @@ const Portfolio = () => {
       }
     };
   }, []);
+
   const projects = [{
     title: 'LUMINA',
     type: 'Landing Page',
@@ -73,6 +79,28 @@ const Portfolio = () => {
     description: 'Portfólio para artista digital com galeria',
     bg: 'from-purple-400/20 to-pink-400/20'
   }];
-  return;
+
+  return (
+    <section id="portfolio" className="py-16 md:py-24 bg-background">
+      <div className="container mx-auto px-4">
+        <h2 ref={titleRef} className="text-3xl md:text-4xl font-bold mb-12 text-center">
+          Portfólio
+        </h2>
+        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project, index) => (
+            <div key={index} className={`project-card rounded-xl overflow-hidden bg-gradient-to-br ${project.bg} p-6 flex flex-col h-64`}>
+              <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+              <p className="text-sm uppercase text-foreground/70 mb-4">{project.type}</p>
+              <p className="text-foreground/80">{project.description}</p>
+              <div className="mt-auto">
+                <button className="text-gold hover:underline">Ver projeto</button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
+
 export default Portfolio;
