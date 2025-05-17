@@ -32,7 +32,7 @@ const Hero = () => {
         <div className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
           <h1 ref={headlineRef} style={{
           transitionDelay: '100ms'
-        }} className="text-4xl md:text-5xl mb-8 uppercase font-opensauce font-extralight lg:text-6xl">
+        }} className="text-4xl md:text-5xl mb-8 uppercase font-opensauce font-extrabold lg:text-6xl">
             <span className="text-inherit">Designs digitais</span> que geram resultados reais
           </h1>
           <p ref={subheadlineRef} className="text-xl md:text-2xl mb-12 max-w-2xl font-museo" style={{
