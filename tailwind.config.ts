@@ -72,6 +72,7 @@ export default {
 				'museo': ['Museo Moderno', 'sans-serif'],
 				'bebas': ['Bebas Neue', 'sans-serif'],
 				'hkgrotesk': ['HK Grotesk', 'system-ui', 'sans-serif'],
+				'opensauce': ['Open Sans', 'system-ui', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

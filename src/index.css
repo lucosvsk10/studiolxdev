@@ -4,6 +4,8 @@
 
 /* Importa a fonte MuseoModerno */
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap');
+/* Importa a fonte Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 @layer base {
   :root {
@@ -117,6 +119,10 @@
 
   .font-museo {
     @apply font-['MuseoModerno'];
+  }
+  
+  .font-opensauce {
+    @apply font-['Open_Sans'];
   }
 }
 
