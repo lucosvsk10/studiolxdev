@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import ThemeToggle from './ThemeToggle';
 import { Menu, X, Phone } from 'lucide-react';
@@ -22,9 +21,7 @@ const Header = () => {
 
   const navItems = [
     { name: 'Home', href: '#home' },
-    { name: 'Sobre', href: '#about' },
     { name: 'Serviços', href: '#services' },
-    { name: 'Portfólio', href: '#portfolio' },
     { name: 'Por que ter um site?', href: '#why-website' },
     { name: 'Serviços & Investimentos', href: '#orcamento' },
   ];
